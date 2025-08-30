@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>TetrisXapp — PezzaliAPP</title>
+  <meta name="description" content="TetrisXapp è un Tetris PWA: leggero, offline, open source, con comandi touch.">
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/favicon.ico">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.v6.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="icons/icon-192.png" alt="TetrisXapp" class="logo" width="40" height="40">
+      <div class="brand-meta">
+        <h1>TetrisXapp</h1>
+        <p class="subtitle">Gioca. Impara. Forka. — by PezzaliAPP</p>
+      </div>
+    </div>
+    <button id="installBtn" class="install-btn" hidden>Installa</button>
+  </header>
+
+  <main class="layout">
+    <section class="board">
+      <canvas id="game" width="300" height="600" aria-label="Tetris board" role="img"></canvas>
+      <div class="hud">
+        <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+        <div class="stat"><span>Level</span><strong id="level">1</strong></div>
+        <div class="stat"><span>Lines</span><strong id="lines">0</strong></div>
+        <div class="stat"><span>Best</span><strong id="best">0</strong></div>
+      </div>
+    </section>
+    <aside class="side">
+      <div class="panel">
+        <h2>Prossimo</h2>
+        <canvas id="next" width="120" height="120" aria-label="Prossimo pezzo" role="img"></canvas>
+      </div>
+      <div class="panel">
+        <h2>Controlli</h2>
+        <div class="controls">
+          <div class="row"><button class="btn" data-act="rotate">↻</button></div>
+          <div class="row">
+            <button class="btn" data-act="left">◀︎</button>
+            <button class="btn" data-act="down">▼</button>
+            <button class="btn" data-act="right">▶︎</button>
+          </div>
+          <div class="row"><button class="btn wide" data-act="drop">HARD DROP</button></div>
+          <div class="row">
+            <button class="btn ghost" data-act="pause">Pausa</button>
+            <button class="btn ghost" data-act="reset">Nuova</button>
+          </div>
+        </div>
+      </div>
+      <details class="panel">
+        <summary>Aiuto</summary>
+        <ul class="help">
+          <li>Freccia ◀︎/▶︎: muovi</li>
+          <li>Freccia ▼: scendi</li>
+          <li><kbd>Z</kbd>/<kbd>↑</kbd>/<kbd>W</kbd>: ruota</li>
+          <li><kbd>Spazio</kbd>: hard drop</li>
+          <li><kbd>P</kbd>: pausa</li>
+          <li><kbd>R</kbd>: nuova partita</li>
+        </ul>
+      </details>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>Open source • Offline PWA • <a href="https://pezzaliapp.com" target="_blank" rel="noopener">PezzaliAPP</a></p>
+  </footer>
+
+  <script src="app.v6.js"></script>
+</body>
+</html>
