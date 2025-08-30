@@ -6,7 +6,10 @@
   const ctx = canvas.getContext('2d');
   const nctx = nextCanvas.getContext('2d');
   const DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-  const COLS = 10, ROWS = 20, SIZE = 30;
+  const COLS = 10, ROWS = 20;
+  const qs = new URLSearchParams(location.search);
+  let SIZE = parseInt(qs.get('size') || '', 10);
+  if (!Number.isFinite(SIZE) || SIZE < 16 || SIZE > 48) SIZE = 24;
   canvas.width = COLS * SIZE * DPR;
   canvas.height = ROWS * SIZE * DPR;
   canvas.style.width = (COLS * SIZE) + 'px';

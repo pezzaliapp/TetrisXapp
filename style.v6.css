@@ -6,7 +6,7 @@ a{color:var(--accent)}
 .brand{display:flex;align-items:center;gap:12px}.logo{border-radius:10px}.brand-meta h1{margin:0;font-size:20px}.subtitle{margin:2px 0 0;color:var(--muted);font-size:12px}
 .install-btn{background:var(--accent);border:none;color:#052e16;padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer}
 .install-btn[hidden]{display:none}
-.layout{display:grid;grid-template-columns:1fr 280px;gap:16px;max-width:980px;margin:16px auto;padding:0 16px}
+.layout{display:grid;grid-template-columns:1fr 280px;gap:16px;max-width:900px;margin:16px auto;padding:0 16px}
 .board{display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px}
 #game{width:100%;height:auto;display:block;background:#0a0f1a;border-radius:12px;border:1px solid #0e1625;touch-action:none}
 .hud{display:flex;gap:12px;justify-content:space-around}
@@ -18,7 +18,7 @@ a{color:var(--accent)}
 .btn{background:var(--btn);color:var(--ink);border:1px solid #273041;padding:10px 12px;border-radius:10px;cursor:pointer;font-weight:600}
 .btn:hover{background:var(--btnHover)}.btn.wide{flex:1}.btn.ghost{background:transparent}
 .help{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
-.site-footer{max-width:980px;margin:12px auto 24px;padding:0 16px;color:var(--muted);text-align:center}
+.site-footer{max-width:900px;margin:12px auto 24px;padding:0 16px;color:var(--muted);text-align:center}
 kbd{background:#111827;border:1px solid #374151;border-radius:4px;padding:2px 6px;font-family:ui-monospace,Consolas,monospace}
 @media (max-width: 900px){.layout{grid-template-columns:1fr}.side{order:-1}.btn{padding:16px 18px;font-size:18px;border-radius:14px}.btn.wide{padding:16px}}
 #tutorial{display:none !important} /* safety: hide any legacy overlay */
