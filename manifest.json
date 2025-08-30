@@ -1,7 +1,6 @@
 {
   "name": "TetrisXapp — PezzaliAPP",
   "short_name": "TetrisXapp",
-  "description": "TetrisXapp è un Tetris PWA: leggero, offline e open source, anche su mobile.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0f172a",

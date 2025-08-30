@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>TetrisXapp — PezzaliAPP</title>
-  <meta name="description" content="TetrisXapp è un Tetris PWA: leggero, offline, open source, con comandi touch.">
+  <meta name="description" content="TetrisXapp è un Tetris PWA moderna, touch-friendly, offline.">
   <meta name="theme-color" content="#0f172a" />
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icons/favicon.ico">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="style.v6.css">
+  <link rel="stylesheet" href="style.v7.css">
 </head>
 <body>
   <header class="site-header">
@@ -35,6 +35,10 @@
     </section>
     <aside class="side">
       <div class="panel">
+        <h2>Hold</h2>
+        <canvas id="hold" width="120" height="120" aria-label="Pezzo in hold" role="img"></canvas>
+      </div>
+      <div class="panel">
         <h2>Prossimo</h2>
         <canvas id="next" width="120" height="120" aria-label="Prossimo pezzo" role="img"></canvas>
       </div>
@@ -54,51 +58,48 @@
           </div>
         </div>
       </div>
+      <div class="panel">
+        <h2>Impostazioni</h2>
+        <div class="settings">
+          <label class="row setting">
+            <span>Dimensione blocchi</span>
+            <input id="sizeSlider" type="range" min="16" max="40" step="1">
+            <span id="sizeValue" class="value">—</span>
+          </label>
+          <label class="row setting">
+            <input id="gridToggle" type="checkbox">
+            <span>Mostra griglia</span>
+          </label>
+          <label class="row setting">
+            <span>Tema</span>
+            <select id="themeSelect">
+              <option value="auto">Auto</option>
+              <option value="dark">Scuro</option>
+              <option value="light">Chiaro</option>
+            </select>
+          </label>
+          <label class="row setting">
+            <input id="muteToggle" type="checkbox">
+            <span>Silenzia suoni</span>
+          </label>
+          <button class="btn ghost" id="resetPrefs">Ripristina predefiniti</button>
+        </div>
+      </div>
       <details class="panel">
         <summary>Aiuto</summary>
         <ul class="help">
-          <li>Freccia ◀︎/▶︎: muovi</li>
-          <li>Freccia ▼: scendi</li>
-          <li><kbd>Z</kbd>/<kbd>↑</kbd>/<kbd>W</kbd>: ruota</li>
-          <li><kbd>Spazio</kbd>: hard drop</li>
-          <li><kbd>P</kbd>: pausa</li>
-          <li><kbd>R</kbd>: nuova partita</li>
+          <li>◀︎/▶︎: muovi • ▼: scendi</li>
+          <li>Z / ↑ / W: ruota • Spazio: hard drop</li>
+          <li>C: hold • P: pausa • R: nuova</li>
         </ul>
       </details>
-      <div class="panel">
-      <h2>Impostazioni</h2>
-      <div class="settings">
-        <label class="row setting">
-          <span>Dimensione blocchi</span>
-          <input id="sizeSlider" type="range" min="16" max="40" step="1">
-          <span id="sizeValue" class="value">—</span>
-        </label>
-        <label class="row setting">
-          <input id="gridToggle" type="checkbox">
-          <span>Mostra griglia</span>
-        </label>
-        <label class="row setting">
-          <span>Tema</span>
-          <select id="themeSelect">
-            <option value="auto">Auto</option>
-            <option value="dark">Scuro</option>
-            <option value="light">Chiaro</option>
-          </select>
-        </label>
-        <label class="row setting">
-          <input id="muteToggle" type="checkbox">
-          <span>Silenzia suoni</span>
-        </label>
-        <button class="btn ghost" id="resetPrefs">Ripristina predefiniti</button>
-      </div>
-    </div>
-</aside>
+    </aside>
   </main>
 
   <footer class="site-footer">
     <p>Open source • Offline PWA • <a href="https://pezzaliapp.com" target="_blank" rel="noopener">PezzaliAPP</a></p>
   </footer>
 
-  <script src="app.v6.js"></script>
+  <script src="app.v7.js"></script>
 </body>
 </html>
