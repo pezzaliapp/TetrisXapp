@@ -47,7 +47,7 @@
             <button class="btn" data-act="down">▼</button>
             <button class="btn" data-act="right">▶︎</button>
           </div>
-          <div class="row"><button class="btn wide" data-act="drop">HARD DROP</button></div>
+          <div class="row"><button class="btn" data-act="hold">HOLD</button><button class="btn wide" data-act="drop">HARD DROP</button></div>
           <div class="row">
             <button class="btn ghost" data-act="pause">Pausa</button>
             <button class="btn ghost" data-act="reset">Nuova</button>
@@ -65,7 +65,34 @@
           <li><kbd>R</kbd>: nuova partita</li>
         </ul>
       </details>
-    </aside>
+      <div class="panel">
+      <h2>Impostazioni</h2>
+      <div class="settings">
+        <label class="row setting">
+          <span>Dimensione blocchi</span>
+          <input id="sizeSlider" type="range" min="16" max="40" step="1">
+          <span id="sizeValue" class="value">—</span>
+        </label>
+        <label class="row setting">
+          <input id="gridToggle" type="checkbox">
+          <span>Mostra griglia</span>
+        </label>
+        <label class="row setting">
+          <span>Tema</span>
+          <select id="themeSelect">
+            <option value="auto">Auto</option>
+            <option value="dark">Scuro</option>
+            <option value="light">Chiaro</option>
+          </select>
+        </label>
+        <label class="row setting">
+          <input id="muteToggle" type="checkbox">
+          <span>Silenzia suoni</span>
+        </label>
+        <button class="btn ghost" id="resetPrefs">Ripristina predefiniti</button>
+      </div>
+    </div>
+</aside>
   </main>
 
   <footer class="site-footer">
