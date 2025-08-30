@@ -78,6 +78,6 @@
     });
   }
 
-  update();
   initGame();
+  update();
 })();
